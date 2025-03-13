@@ -1,0 +1,78 @@
+/* Container that holds the entire article */
+.article-container {
+    max-width: 800px;
+    margin: 20px auto;
+    padding: 20px;
+    background-color: #f9f9f9;
+    border-radius: 8px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    transition: transform 0.2s ease-in-out;
+  }
+  
+  .article-container:hover {
+    transform: translateY(-5px);
+  }
+  
+  /* Flexbox container for the header */
+  .article-header {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    margin-bottom: 15px;
+  }
+  
+  /* Username styling */
+  .username {
+    font-size: 14px;
+    color: #666;
+    margin-bottom: 5px;
+    font-style: italic;
+  }
+  
+  /* Title styling */
+  .article-title {
+    font-size: 28px;
+    font-weight: bold;
+    margin: 0;
+    line-height: 1.2;
+  }
+  
+  /* Content styling */
+  .article-content {
+    font-size: 16px;
+    color: #333;
+    line-height: 1.6;
+    text-align: justify;
+    margin: 0;
+  }
+
+  /* Pencil icon position */
+    .edit-icon {
+        position: absolute;
+        top: 20px;
+        right: 20px;
+        font-size: 24px;
+        cursor: pointer;
+        color: #007bff;
+        transition: color 0.2s;
+    }
+  
+  .edit-icon:hover {
+    color: #0056b3;
+  }
+  
+  /* Responsive design for smaller screens */
+  @media (max-width: 768px) {
+    .article-container {
+      padding: 15px;
+    }
+  
+    .article-title {
+      font-size: 24px;
+    }
+  
+    .article-content {
+      font-size: 14px;
+    }
+  }
+  

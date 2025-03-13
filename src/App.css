@@ -1,0 +1,163 @@
+/* Container that holds the entire article */
+.article-container {
+  max-width: 800px;
+  margin: 20px auto;
+  padding: 20px;
+  background-color: #f9f9f9;
+  border-radius: 8px;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+  position: relative; /* Make sure the pencil icon can be positioned within this container */
+  transition: transform 0.2s ease-in-out;
+}
+
+.article-container:hover {
+  transform: translateY(-5px);
+}
+
+/* Flexbox container for the header */
+.article-header {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  margin-bottom: 15px;
+}
+
+/* Username styling */
+.username {
+  font-size: 14px;
+  color: #666;
+  margin-bottom: 5px;
+  font-style: italic;
+}
+
+/* Title styling */
+.article-title {
+  font-size: 28px;
+  font-weight: bold;
+  margin: 0;
+  line-height: 1.2;
+}
+
+.comments-section {
+  margin-top: 20px;
+}
+
+.comment-form {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+textarea {
+  width: 100%;
+  height: 100px;
+  padding: 10px;
+  border-radius: 5px;
+  border: 1px solid #ccc;
+}
+
+button {
+  align-self: flex-start;
+  padding: 10px 15px;
+  background-color: #007bff;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+button:hover {
+  background-color: #0056b3;
+}
+
+.comments-list {
+  margin-top: 15px;
+}
+
+.comment {
+  background-color: #f8f9fa;
+  padding: 10px;
+  margin-bottom: 10px;
+  border-radius: 5px;
+}
+
+/* Content styling */
+.article-content {
+  font-size: 16px;
+  color: #333;
+  line-height: 1.6;
+  text-align: justify;
+  margin: 0;
+}
+
+/* Pencil icon positioned at the top-right corner */
+.edit-icon {
+  position: absolute;
+  top: 10px;   /* Adjust the position from the top */
+  right: 10px; /* Adjust the position from the right */
+  cursor: pointer;
+  transition: transform 0.2s;
+}
+
+.edit-icon:hover {
+  transform: scale(1.1); /* Slight scale on hover for effect */
+}
+
+/* Pencil icon image styling */
+.pencil-icon {
+  width: 30px;  /* Adjust the size of the pencil icon */
+  height: 30px;
+  object-fit: contain;
+}
+
+.slideshow-container {
+  max-width: 100%;
+  position: relative;
+  margin: auto;
+}
+
+.navigation-container {
+  position: fixed;
+  bottom: 20px;
+  left: 50%;
+  transform: translateX(-50%);
+  text-align: center;
+}
+
+.navigation-container button {
+  margin: 5px;
+  font-size: 18px;
+  padding: 10px 20px;
+}
+
+.fixed-textarea {
+  width: 100%;         /* Make the textarea full width of its parent container */
+  max-width: 100%;     /* Ensure no overflow on the horizontal axis */
+  height: 200px;       /* Set a fixed height */
+  resize: none;        /* Disable resizing of the textarea */
+}
+
+.hover-light:hover {
+  color: #ccc;  /* Light grey or any color of your choice */
+  text-decoration: none;  /* Optional: Remove underline */
+}
+
+/* Responsive design for smaller screens */
+@media (max-width: 768px) {
+  .article-container {
+    padding: 15px;
+  }
+
+  .article-title {
+    font-size: 24px;
+  }
+
+  .article-content {
+    font-size: 14px;
+  }
+
+  .pencil-icon {
+    width: 25px;  /* Adjust pencil icon size for smaller screens */
+    height: 25px;
+  }
+}
